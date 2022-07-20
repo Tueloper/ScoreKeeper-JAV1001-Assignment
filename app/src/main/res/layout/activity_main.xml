@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="SCORE KEEPER"
+        android:text="@string/score_keeper"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="35sp"
@@ -36,18 +36,19 @@
                 android:id="@+id/player_one_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TEAM A"
+                android:text="@string/team_a"
                 android:textAlignment="center"
                 android:textColor="#3F51B5"
                 android:layout_marginBottom="40dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button_team_a_increase_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="@string/AddButton"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/score_team_a"
@@ -57,15 +58,18 @@
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="0"
+                android:text="@string/score_value"
                 android:textAlignment="center"
-                android:textSize="150dp" />
+                android:textSize="150sp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
                 android:id="@+id/button_team_a_decrease_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-" />
+                android:text="@string/SubtractButton"
+                android:textColor="#795548"
+                tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
 
         <View
@@ -76,7 +80,7 @@
 
         <RadioGroup
             android:id="@+id/radio_groups"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:gravity="center">
 
@@ -84,19 +88,25 @@
                 android:id="@+id/radio_button_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1" />
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="@string/radio_button_1" />
 
             <RadioButton
                 android:id="@+id/radio_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2" />
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="@string/radio_button_2" />
 
             <RadioButton
                 android:id="@+id/radio_button_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3" />
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:text="@string/radio_button_3" />
         </RadioGroup>
 
         <View
@@ -119,18 +129,18 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TEAM B"
+                android:text="@string/team_b"
                 android:textAlignment="center"
                 android:textColor="#3F51B5"
                 android:layout_marginBottom="40dp"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button_team_b_increase_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="+" />
+                android:text="@string/AddButtonB" />
 
             <TextView
                 android:id="@+id/score_team_b"
@@ -142,13 +152,14 @@
                 android:inputType="number"
                 android:text="0"
                 android:textAlignment="center"
-                android:textSize="150dp" />
+                android:textSize="150sp" />
 
             <Button
                 android:id="@+id/button_team_b_decrease_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="-" />
+                android:text="@string/SubtractButtonB"
+                android:textColor="#795548" />
         </LinearLayout>
     </LinearLayout>
 
