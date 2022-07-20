@@ -16,9 +16,7 @@
         android:layout_marginTop="50dp"
         android:text="@string/score_keeper"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#009688"
-        android:textSize="35sp"
+        style="@style/HeaderLabel"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -41,7 +39,7 @@
                 android:layout_marginBottom="40dp"
                 android:text="@string/team_a"
                 android:textAlignment="center"
-                android:textColor="#009688"
+                style="@style/TeamLabel"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -49,10 +47,7 @@
                 android:id="@+id/button_team_a_increase_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#009688"
                 android:text="@string/AddButton"
-                android:textColor="@color/white"
-                android:textSize="34sp"
                 android:typeface="normal"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -65,9 +60,7 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/score_value"
-                android:textAlignment="center"
-                android:textColor="#009688"
-                android:textSize="150sp"
+                style="@style/ScoreLabel"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
@@ -75,9 +68,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/SubtractButton"
-                android:background="#009688"
-                android:textColor="@color/white"
-                android:textSize="40sp"
                 android:typeface="normal"
                 tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
@@ -98,40 +88,31 @@
                 android:id="@+id/radio_button_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="#020101"
                 android:focusable="auto"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/radio_button_1"
-                android:textColor="#000000"
-                android:textColorHighlight="#000000"
-                android:textColorLink="#000000" />
+                style="@style/myRadioButtons"
+                android:text="@string/radio_button_1" />
 
             <RadioButton
                 android:id="@+id/radio_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="#020101"
                 android:focusable="auto"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 android:text="@string/radio_button_2"
-                android:textColor="#000000"
-                android:textColorHighlight="#000000"
-                android:textColorLink="#000000" />
+                style="@style/myRadioButtons" />
 
             <RadioButton
                 android:id="@+id/radio_button_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:buttonTint="#020101"
+                style="@style/myRadioButtons"
                 android:focusable="auto"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/radio_button_3"
-                android:textColor="#000000"
-                android:textColorHighlight="#000000"
-                android:textColorLink="#000000" />
+                android:text="@string/radio_button_3" />
         </RadioGroup>
 
 <!--        <View-->
@@ -157,19 +138,15 @@
                 android:layout_marginBottom="40dp"
                 android:text="@string/team_b"
                 android:textAlignment="center"
-                android:textColor="#009688"
-                android:textSize="25sp"
+                style="@style/TeamLabel"
                 android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button_team_b_increase_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#009688"
-                android:text="@string/AddButton"
-                android:textColor="@color/white"
-                android:textSize="34sp"
                 android:typeface="normal"
+                android:text="@string/AddButton"
                 tools:ignore="DuplicateSpeakableTextCheck"/>
 
             <TextView
@@ -180,19 +157,14 @@
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number"
-                android:text="0"
-                android:textAlignment="center"
-                android:textColor="#009688"
-                android:textSize="150sp" />
+                style="@style/ScoreLabel"
+                android:text="0" />
 
             <Button
                 android:id="@+id/button_team_b_decrease_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/SubtractButton"
-                android:background="#009688"
-                android:textColor="@color/white"
-                android:textSize="40sp"
                 android:typeface="normal"/>
         </LinearLayout>
     </LinearLayout>
