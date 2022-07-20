@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:backgroundTint="#0DD0BD"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -16,30 +17,31 @@
         android:text="@string/score_keeper"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#009688"
         android:textSize="35sp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/player_one_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
                 android:text="@string/team_a"
                 android:textAlignment="center"
-                android:textColor="#3F51B5"
-                android:layout_marginBottom="40dp"
+                android:textColor="#009688"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -47,19 +49,24 @@
                 android:id="@+id/button_team_a_increase_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#009688"
                 android:text="@string/AddButton"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:typeface="normal"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/score_team_a"
                 android:layout_width="match_parent"
-                android:layout_height="430dp"
+                android:layout_height="420dp"
                 android:layout_gravity="center"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number"
                 android:text="@string/score_value"
                 android:textAlignment="center"
+                android:textColor="#009688"
                 android:textSize="150sp"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
@@ -68,15 +75,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/SubtractButton"
-                android:textColor="#795548"
+                android:background="#009688"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:typeface="normal"
                 tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="3dp"
-            android:layout_height="match_parent"
-            android:background="?android:attr/listDivider" />
+<!--        <View-->
+<!--            android:id="@+id/divider"-->
+<!--            android:layout_width="3dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="?android:attr/listDivider" />-->
 
         <RadioGroup
             android:id="@+id/radio_groups"
@@ -88,37 +98,52 @@
                 android:id="@+id/radio_button_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="#020101"
+                android:focusable="auto"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/radio_button_1" />
+                android:text="@string/radio_button_1"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000" />
 
             <RadioButton
                 android:id="@+id/radio_button_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="#020101"
+                android:focusable="auto"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/radio_button_2" />
+                android:text="@string/radio_button_2"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000" />
 
             <RadioButton
                 android:id="@+id/radio_button_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:buttonTint="#020101"
+                android:focusable="auto"
                 android:minWidth="48dp"
                 android:minHeight="48dp"
-                android:text="@string/radio_button_3" />
+                android:text="@string/radio_button_3"
+                android:textColor="#000000"
+                android:textColorHighlight="#000000"
+                android:textColorLink="#000000" />
         </RadioGroup>
 
-        <View
-            android:id="@+id/divider_2"
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-            android:background="?android:attr/listDivider" />
+<!--        <View-->
+<!--            android:id="@+id/divider_2"-->
+<!--            android:layout_width="2dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="?android:attr/listDivider" />-->
 
         <LinearLayout
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -129,10 +154,10 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
                 android:text="@string/team_b"
                 android:textAlignment="center"
-                android:textColor="#3F51B5"
-                android:layout_marginBottom="40dp"
+                android:textColor="#009688"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -140,26 +165,35 @@
                 android:id="@+id/button_team_b_increase_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/AddButtonB" />
+                android:background="#009688"
+                android:text="@string/AddButton"
+                android:textColor="@color/white"
+                android:textSize="34sp"
+                android:typeface="normal"
+                tools:ignore="DuplicateSpeakableTextCheck"/>
 
             <TextView
                 android:id="@+id/score_team_b"
                 android:layout_width="match_parent"
-                android:layout_height="430dp"
+                android:layout_height="420dp"
                 android:layout_gravity="center"
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="number"
                 android:text="0"
                 android:textAlignment="center"
+                android:textColor="#009688"
                 android:textSize="150sp" />
 
             <Button
                 android:id="@+id/button_team_b_decrease_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/SubtractButtonB"
-                android:textColor="#795548" />
+                android:text="@string/SubtractButton"
+                android:background="#009688"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                android:typeface="normal"/>
         </LinearLayout>
     </LinearLayout>
 
