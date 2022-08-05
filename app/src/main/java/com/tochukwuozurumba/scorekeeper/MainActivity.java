@@ -1,13 +1,18 @@
 package com.tochukwuozurumba.scorekeeper;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+//        define varaibles
         rgButton = findViewById(R.id.radio_groups);
         Button buttonA_1 = findViewById(R.id.button_team_a_increase_id);
         Button buttonA_2 = findViewById(R.id.button_team_a_decrease_id);
@@ -28,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         TextView teamAScore = findViewById(R.id.score_team_a);
         TextView teamBScore = findViewById(R.id.score_team_b);
 
+//        team A button listener
         buttonA_1.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -38,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //        team A decrease button listener
         buttonA_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //        team B increase button listener
         buttonB_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //        team B decrease button listener
         buttonB_2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,6 +76,33 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+//    add menu to home page
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return true;
+
+    }
+
+//    actions for each item in the menu
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.nav_about:
+                Toast.makeText(MainActivity.this,"Hello, My name is Tochukwu Ozurumba",Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.nav_settings:
+                Intent intent = new Intent(MainActivity.this , SettingActivity.class);
+                startActivity(intent);
+
+                return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+//    calculate all scores in the view
     private int calculateScore(int oldNumber, int newNumber, String sign) {
         int finalScore;
 
@@ -78,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
         return finalScore;
     }
 
+//    get radio button value
     private int getRadioButtonValue() {
         int result;
 

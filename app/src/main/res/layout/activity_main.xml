@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#0DD0BD"
     android:orientation="vertical"
+    android:name="android.support.PARENT_ACTIVITY"
     tools:context=".MainActivity">
 
 
